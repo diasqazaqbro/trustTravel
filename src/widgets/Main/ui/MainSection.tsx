@@ -6,6 +6,7 @@ import {
   Logo,
   Naming,
   Phone,
+  Search,
   Success,
   TikTok,
 } from "@/shared/ui/Icon/Icon";
@@ -43,20 +44,22 @@ const MainSection = () => {
             <h1 className="title">
               Путешествуйте с удовольствием, выбирайте TrusTTravel !
             </h1>
-            <div className="filtration">
-              <div className="item">
+            <div className="filtration row">
+              <div className="col-md-3 item col-sm-6">
                 <div className="name">Вид туризма</div>
               </div>
-              <div className="item">
+              <div className="col-md-3 item col-sm-6">
                 <div className="name">Вид туризма</div>
               </div>
-              <div className="item">
+              <div className="col-md-3 item col-sm-6">
                 <div className="name">Вид туризма</div>
               </div>
-              <div className="item">
-                <div className="name">Вид туризма</div>
+              <div className="col-md-3 item col-sm-6 row">
+                <div className="name col-8">Вид туризма</div>
+                <div className="col-4 search">
+                  <Search/>
+                </div>
               </div>
-              <button>Search</button>
             </div>
           </div>
         </div>
