@@ -1,7 +1,10 @@
-import MainSection from '@/widgets/Main/ui/MainSection'
+import Layout from '@/widgets/Layout/Layout'
+import MainSection from '@/widgets/Main/MainSection'
 
 export default function Home() {
   return (
-    <MainSection/>
+    <Layout>
+      <MainSection/>
+    </Layout>
   )
 }

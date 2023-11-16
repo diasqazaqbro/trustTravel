@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./styles/index.sass";
-import 'bootstrap/dist/css/bootstrap.css'
+import { Providers } from "./provider/Provider";
 const inter = Montserrat({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

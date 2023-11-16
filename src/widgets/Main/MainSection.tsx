@@ -1,18 +1,10 @@
 import React from "react";
-import "./MainSection.sass";
-import {
-  Arrow,
-  Instagram,
-  Logo,
-  Naming,
-  Phone,
-  Search,
-  Success,
-  TikTok,
-} from "@/shared/ui/Icon/Icon";
-import Link from "next/link";
+import styles from "./MainSection.module.sass";
+import { Arrow, Success } from "@/shared/ui/Icon/Icon";
 import Image from "next/image";
 import { Carousel } from "antd";
+import Title from "@/shared/ui/Title/Title";
+import TitleCenter from "@/shared/ui/Title/TitleCenter";
 const MainSection = () => {
   const contentStyle: React.CSSProperties = {
     height: "360px",
@@ -22,53 +14,12 @@ const MainSection = () => {
     background: "#364d79",
   };
   return (
-    <main className="main">
-      <section className="welcome">
-        <div className="container">
-          <header className="header">
-            <div className="inner">
-              <div className="logo">
-                <Logo />
-                <Naming />
-              </div>
-              <nav className="nav">
-                <Link href={""}>О нас</Link>
-                <Link href={""}>Преимущества</Link>
-                <Link href={""}>Геймификация</Link>
-                <Link href={""}>Дорожная карта</Link>
-              </nav>
-              <button className="login">Войти</button>
-            </div>
-          </header>
-          <div className="wrapper">
-            <h1 className="title">
-              Путешествуйте с удовольствием, выбирайте TrusTTravel !
-            </h1>
-            <div className="filtration row">
-              <div className="col-md-3 item col-sm-6">
-                <div className="name">Вид туризма</div>
-              </div>
-              <div className="col-md-3 item col-sm-6">
-                <div className="name">Вид туризма</div>
-              </div>
-              <div className="col-md-3 item col-sm-6">
-                <div className="name">Вид туризма</div>
-              </div>
-              <div className="col-md-3 item col-sm-6 row">
-                <div className="name col-8">Вид туризма</div>
-                <div className="col-4 search">
-                  <Search/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="about">
-        <div className="container">
-          <h1 className="title">О нас</h1>
-          <div className="inner">
-            <div className="text">
+    <main className={styles.main}>
+      <section className={styles.about}>
+        <div className={"container"}>
+          <Title text={"О нас"} />
+          <div className={styles.inner}>
+            <div className={styles.text}>
               <b>TrusTTravel</b> - Платформа, предоставление уникального опыта
               путешествий по Казахстану, предлагая выбор туров и
               достопримечательностей на основе личных предпочтений пользователя.
@@ -76,38 +27,38 @@ const MainSection = () => {
               туристические квесты, зарабатывать баллы и обменивать их в нашем
               магазине на уникальные награды.
             </div>
-            <div className="img"></div>
+            <div className={styles.img}></div>
           </div>
         </div>
       </section>
-      <section className="advantage">
-        <div className="container">
-          <h1 className="title">Преимущества</h1>
-          <div className="inner">
-            <div className="images">
-              <div className="img img__1"></div>
-              <div className="img img__2"></div>
+      <section className={styles.advantage}>
+        <div className={"container"}>
+          <Title text={"Преимущества"} />
+          <div className={styles.inner}>
+            <div className={styles.images}>
+              <div className={styles.img + styles.img__1}></div>
+              <div className={styles.img + styles.img__2}></div>
             </div>
-            <div className="info">
-              <div className="item">
+            <div className={styles.info}>
+              <div className={styles.item}>
                 <Success />
                 <h5>
                   Мы распространяем туризм в Казахстане и делаем его доступным.
                 </h5>
               </div>
-              <div className="item">
+              <div className={styles.item}>
                 <Success />
                 <h5>
                   Мы распространяем туризм в Казахстане и делаем его доступным.
                 </h5>
               </div>
-              <div className="item">
+              <div className={styles.item}>
                 <Success />
                 <h5>
                   Мы распространяем туризм в Казахстане и делаем его доступным.
                 </h5>
               </div>
-              <div className="item">
+              <div className={styles.item}>
                 <Success />
                 <h5>
                   Мы распространяем туризм в Казахстане и делаем его доступным.
@@ -117,11 +68,11 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="game">
-        <div className="container">
-          <h1 className="title">Геймификация</h1>
-          <div className="inner">
-            <div className="images">
+      <section className={styles.game}>
+        <div className={"container"}>
+          <Title color="primary" text={"Геймификация"} />
+          <div className={styles.inner}>
+            <div className={styles.images}>
               <h2>Что это?</h2>
               <Image
                 src={"/images/gamepad.png"}
@@ -130,15 +81,15 @@ const MainSection = () => {
                 alt="game"
               />
             </div>
-            <div className="info">
-              <h3 className="text">
+            <div className={styles.info}>
+              <h3 className={styles.text}>
                 1. Найдите любой понравившийся квест или достижение
               </h3>
-              <h4 className="text">
+              <h4 className={styles.text}>
                 2. Вы выполняете задание. Пройдите N шагов, доберитесь до
                 какого-нибудь ориентира или завершите достижение.
               </h4>
-              <h5 className="text">
+              <h5 className={styles.text}>
                 3. После выполнения вам будут начислены баллы, которые вы
                 сможете потратить в нашем офлайн-магазине.
               </h5>
@@ -146,9 +97,9 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="system">
-        <div className="container">
-          <h1 className="title">
+      <section className={styles.system}>
+        <div className={"container"}>
+          <h1 className={styles.title}>
             Система <b>подбора</b> туров
           </h1>
           <p>
@@ -186,12 +137,12 @@ const MainSection = () => {
           </Carousel>
         </div>
       </section>
-      <section className="teams">
-        <div className="container">
-          <h1 className="title">Команда</h1>
-          <div className="inner">
-            <div className="top">
-              <div className="item">
+      <section className={styles.teams}>
+        <div className={"container"}>
+          <TitleCenter text="Команда" />
+          <div className={styles.inner}>
+            <div className={styles.top}>
+              <div className={styles.item}>
                 <Image
                   src={"/images/alihan.png"}
                   width={170}
@@ -202,8 +153,8 @@ const MainSection = () => {
                 <h3>CEO & Founder</h3>
               </div>
             </div>
-            <div className="bottom">
-              <div className="item">
+            <div className={styles.bottom}>
+              <div className={styles.item}>
                 <Image
                   src={"/images/alihan.png"}
                   width={170}
@@ -213,7 +164,7 @@ const MainSection = () => {
                 <h2>Tuleubaev Alikhan</h2>
                 <h3>Fullstack</h3>
               </div>
-              <div className="item">
+              <div className={styles.item}>
                 <Image
                   src={"/images/alihan.png"}
                   width={170}
@@ -223,7 +174,7 @@ const MainSection = () => {
                 <h2>Tuleubaev Alikhan</h2>
                 <h3>UI/IX Designer</h3>
               </div>
-              <div className="item">
+              <div className={styles.item}>
                 <Image
                   src={"/images/alihan.png"}
                   width={170}
@@ -233,7 +184,7 @@ const MainSection = () => {
                 <h2>Tuleubaev Alikhan</h2>
                 <h3>CTO</h3>
               </div>
-              <div className="item">
+              <div className={styles.item}>
                 <Image
                   src={"/images/alihan.png"}
                   width={170}
@@ -247,11 +198,11 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="faq">
-        <div className="container">
-          <h1 className="title">FAQ</h1>
-          <div className="inner">
-            <div className="item">
+      <section className={styles.faq}>
+        <div className={"container"}>
+          <TitleCenter text="FAQ" />
+          <div className={styles.inner}>
+            <div className={styles.item}>
               <h2>
                 Что можно приобрести во внутреннем магазине? <Arrow />
               </h2>
@@ -263,7 +214,7 @@ const MainSection = () => {
               </p>
               <hr />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <h2>
                 Что можно приобрести во внутреннем магазине? <Arrow />
               </h2>
@@ -275,7 +226,7 @@ const MainSection = () => {
               </p>
               <hr />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <h2>
                 Что можно приобрести во внутреннем магазине? <Arrow />
               </h2>
@@ -290,11 +241,11 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="partners">
-        <div className="container">
-          <h1 className="title">Партнёры</h1>
-          <div className="inner">
-            <div className="item">
+      <section className={styles.partners}>
+        <div className={"container"}>
+          <TitleCenter text="Партнеры" />
+          <div className={styles.inner}>
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -302,7 +253,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -310,7 +261,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -318,7 +269,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -326,7 +277,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -334,7 +285,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -342,7 +293,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -350,7 +301,7 @@ const MainSection = () => {
                 src={"/images/easygroup.png"}
               />
             </div>
-            <div className="item">
+            <div className={styles.item}>
               <Image
                 width={160}
                 height={160}
@@ -361,63 +312,21 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className="roadmap">
-        <div className="container">
-          <h1 className="title">Дорожная карта</h1>
-          <div className="inner">
-            <Image
+      <section className={styles.roadmap}>
+        <div className={"container"}>
+          <Title text="Дорожная карта" />
+          <div className={styles.inner}>
+            <img
               src={"/images/roadmap.png"}
-              width={1100}
-              height={573}
               alt="roadmap"
+              style={{
+                width: '100%',
+                marginBottom: '50px'
+              }}
             />
           </div>
         </div>
       </section>
-      <footer>
-        <div className="container">
-          <div className="inner">
-            <div className="block__one">
-              <div className="logo">
-                <Logo />
-                <Naming />
-              </div>
-              <div className="contacts">
-                <h2>Контакты</h2>
-                <h3>trusttravel.contact@gmail.com</h3>
-                <div className="icons">
-                  <Phone /> <Instagram /> <TikTok />
-                </div>
-              </div>
-            </div>
-            <div className="block__two">
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-            </div>
-            <div className="block__three">
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-              <h5>Сервис</h5>
-            </div>
-            <div className="block__four">
-              <h3>Подпишись сейчас</h3>
-              <p>
-                Подпишитесь на нашу рассылку, чтобы всегда быть в курсе всех
-                скидок и горящих туров
-              </p>
-              <form>
-                <input type="email" name="email" id="" />
-                <button>Отправить</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 };

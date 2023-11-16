@@ -1,0 +1,53 @@
+.header
+    .inner
+        align-items: center
+        display: flex
+        justify-content: space-between
+        .logo
+            display: flex
+            align-items: center
+        button
+            border-radius: 10px
+            background: var(--color-primary)
+            color: #FFF
+            font-size: 18px
+            font-style: normal
+            font-weight: 700
+            line-height: normal
+            outline: none
+            border: none
+            padding: 12px 31px
+
+.welcome
+    background-image: url('/images/welcome.png')
+    background-size: cover
+    .wrapper
+        padding-top: 50px
+        padding-bottom: 150px
+        .title
+            color: var(--color-second)
+            text-align: center
+            font-size: 60px
+            font-style: italic
+            font-weight: 600
+            line-height: normal
+
+@media only screen and (max-width: 600px)
+    .header
+        .inner
+            button
+                display: none
+
+    .welcome
+        .wrapper
+            padding-bottom: 100px
+            .title
+                font-size: 30px
+
+            .filtration
+                width: 100%
+                height: 100%
+                padding: 20px
+                .item
+                    .name
+                        font-size: 14px
