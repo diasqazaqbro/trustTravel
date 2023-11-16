@@ -14,27 +14,88 @@
             .img
                 width: 375.277px
                 height: 237px
+                position: relative
                 border-radius: 10px
-                border: 3px solid var(--color-second)
+                background: url('/images/mountain.png'), lightgray -76.901px 0.001px / 135.085% 103.979% no-repeat
+                .alt
+                    position: absolute
+                    top: 45%
+                    right: -80px
+                    transform: rotate(90deg)
+                    color: #FFF
+                    width: 134.669px
+                    height: 28.943px
+                    flex-shrink: 0
+                    border-radius: 5px 5px 0px 0px
+                    background: #132950
+                    text-align: center
+                    font-size: 15px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+
     .advantage
         .inner
             display: flex
             justify-content: space-between
             .images
-                .img
+                .img__one
+                    margin-top: 40px
+                    margin-left: 40px
                     width: 374.368px
                     height: 237px
-                .img__1
                     border-radius: 10px
-                    border: 3px solid #8A0000
-                .img__2
+                    position: relative
+                    background: url('/images/charyn.png')
+                    .alt
+                        position: absolute
+                        top: 45%
+                        left: -85px
+                        transform: rotate(270deg)
+                        padding-top: 7px
+                        color: #FFF
+                        width: 134.669px
+                        height: 28.943px
+                        flex-shrink: 0
+                        border-radius: 5px 5px 0px 0px
+                        background: #8A0000
+                        text-align: center
+                        font-size: 15px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+                .img__two
+                    margin-top: 30px
+                    margin-left: 150px
+                    width: 374.368px
+                    height: 237px
                     border-radius: 10px
-                    border: 3px solid #008515
+                    position: relative
+                    background: url('/images/lake.png')
+                    .alt
+                        position: absolute
+                        top: 45%
+                        left: -110px
+                        transform: rotate(270deg)
+                        padding-top: 7px
+                        color: #FFF
+                        width: 186.066px
+                        height: 28.943px
+                        flex-shrink: 0
+                        border-radius: 5px 5px 0px 0px
+                        background: #008515
+                        text-align: center
+                        font-size: 15px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+
             .info
                 width: 35%
                 .item
                     display: flex
                     align-items: center
+
                     svg
                         width: 50px
                         height: 50px
@@ -91,9 +152,78 @@
             font-style: normal
             font-weight: 500
             line-height: 140%
-        :where(.css-dev-only-do-not-override-1adbn6x).ant-carousel .slick-dots li button
-            background-color: #008515
-            height: 5px
+        .carousel
+            width: 50%
+            position: relative
+            margin: 0 auto
+            .images__one
+                border-radius: 20px
+                width: 20%
+                height: 300px
+                background: var(--color-primary)
+                .alt
+                    position: relative
+                    left: 35%
+                    bottom: 0px
+                    padding-top: 7px
+                    color: #FFF
+                    width: 186px
+                    height: 28px
+                    flex-shrink: 0
+                    border-radius: 5px
+                    background: #008515
+                    text-align: center
+                    font-size: 15px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+            .images__two
+                border-radius: 20px
+                width: 20%
+                height: 300px
+                background-size: 50% auto
+                background-repeat: no-repeat
+                background: var(--color-second)
+                .alt
+                    position: relative
+                    left: 145px
+                    bottom: 0px
+                    padding-top: 7px
+                    color: #FFF
+                    width: 186px
+                    height: 28px
+                    flex-shrink: 0
+                    border-radius: 5px
+                    background: #008515
+                    text-align: center
+                    font-size: 15px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+            .images__three
+                border-radius: 20px
+                width: 20%
+                height: 300px
+                background-size: 50% auto
+                background-repeat: no-repeat
+                background: var(--color-dark)
+                .alt
+                    position: relative
+                    left: 145px
+                    bottom: 0px
+                    padding-top: 7px
+                    color: #FFF
+                    width: 186px
+                    height: 28px
+                    flex-shrink: 0
+                    border-radius: 5px
+                    background: #008515
+                    text-align: center
+                    font-size: 15px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+
     .teams
         padding: 110px 0
         .inner
@@ -108,7 +238,7 @@
                     font-style: normal
                     font-weight: 500
                     text-align: center
-                    margin: 0
+                    margin: 5px 0
                 h3
                     color: #000
                     font-size: 24px
@@ -168,7 +298,6 @@
     .main
         .about
             padding: 110px 0
-
             .inner
                 .text
                     font-size: 18px
@@ -181,6 +310,7 @@
                 display: block
                 justify-content: space-between
                 .images
+                    display: none
                 .info
                     width: 100%
 
@@ -199,7 +329,20 @@
                 font-size: 30px
             p
                 font-size: 20px
-                line-height: 140%
+
+            .carousel
+                width: 100%
+                .images__one
+                    .alt
+                        display: none
+                .images__two
+                    .alt
+                        display: none
+                .images__three
+                    .alt
+                        display: none
+
+        
         .teams
             display: none
 
@@ -219,17 +362,6 @@
                     hr
                         width: 100%
         .partners
-            .title
-                font-size: 30px
-            .inner
-                border-radius: 10px
-                background: #132950
-                height: 100%
-                padding: 10px 30px
-                display: flex
-                .item
-                    padding: 10px 24px
+            display: none
         .roadmap
             display: none
-            
-       

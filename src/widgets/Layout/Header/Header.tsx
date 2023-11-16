@@ -5,16 +5,17 @@ import styles from "./Header.module.sass";
 import { Arrow, Logo, Naming, Search } from "@/shared/ui/Icon/Icon";
 import NavBar from "@/entities/Navbar/Navbar";
 import Navigation from "@/features/Navigation/ui/Navigation";
+import Link from "next/link";
 const Header = () => {
   return (
     <section className={styles.welcome}>
       <div className="container">
         <header className={styles.header}>
           <div className={styles.inner}>
-            <div className={styles.logo}>
+            <Link href='/' className={styles.logo}>
               <Logo />
               <Naming />
-            </div>
+            </Link>
             <NavBar />
             <button className={styles.login}>Войти</button>
           </div>

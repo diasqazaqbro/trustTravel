@@ -7,15 +7,14 @@ import Title from "@/shared/ui/Title/Title";
 import TitleCenter from "@/shared/ui/Title/TitleCenter";
 const MainSection = () => {
   const contentStyle: React.CSSProperties = {
-    height: "360px",
+    height: "205",
     color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
     background: "#364d79",
+    borderRadius: "20px",
   };
   return (
     <main className={styles.main}>
-      <section className={styles.about}>
+      <section id="about" className={styles.about}>
         <div className={"container"}>
           <Title text={"О нас"} />
           <div className={styles.inner}>
@@ -27,17 +26,23 @@ const MainSection = () => {
               туристические квесты, зарабатывать баллы и обменивать их в нашем
               магазине на уникальные награды.
             </div>
-            <div className={styles.img}></div>
+            <div className={styles.img}>
+              <div className={styles.alt}>Trip to Akbulak</div>
+            </div>
           </div>
         </div>
       </section>
-      <section className={styles.advantage}>
+      <section id="advantage" className={styles.advantage}>
         <div className={"container"}>
           <Title text={"Преимущества"} />
           <div className={styles.inner}>
             <div className={styles.images}>
-              <div className={styles.img + styles.img__1}></div>
-              <div className={styles.img + styles.img__2}></div>
+              <div className={styles.img__one}>
+                <div className={styles.alt}>Trip to Charyn</div>
+              </div>
+              <div className={styles.img__two}>
+                <div className={styles.alt}>Trip to Big Almaty Lake</div>
+              </div>
             </div>
             <div className={styles.info}>
               <div className={styles.item}>
@@ -68,7 +73,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className={styles.game}>
+      <section id="game" className={styles.game}>
         <div className={"container"}>
           <Title color="primary" text={"Геймификация"} />
           <div className={styles.inner}>
@@ -97,7 +102,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className={styles.system}>
+      <section id="system" className={styles.system}>
         <div className={"container"}>
           <h1 className={styles.title}>
             Система <b>подбора</b> туров
@@ -107,37 +112,22 @@ const MainSection = () => {
             Теперь они находятся еще быстрее и каждый сможет найти тур, который
             подойдет именно ему.
           </p>
-          <Carousel autoplay>
-            <div>
-              <h3 style={contentStyle}>
-                <Image
-                  src={"/images/gamepad.png"}
-                  width={356}
-                  height={241}
-                  alt="game"
-                />
-              </h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>
-                <Image
-                  src={"/images/gamepad.png"}
-                  width={356}
-                  height={241}
-                  alt="game"
-                />
-              </h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>3</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>4</h3>
-            </div>
-          </Carousel>
+          <div className={styles.carousel}>
+            <Carousel autoplay>
+              <div className={styles.images__one}>
+                <div className={styles.alt}>Trip to Aksu Canyon</div>
+              </div>
+              <div className={styles.images__two}>
+                <div className={styles.alt}>Trip to Aksu Canyon</div>
+              </div>
+              <div className={styles.images__three}>
+                <div className={styles.alt}>Trip to Aksu Canyon</div>
+              </div>
+            </Carousel>
+          </div>
         </div>
       </section>
-      <section className={styles.teams}>
+      <section id="teams" className={styles.teams}>
         <div className={"container"}>
           <TitleCenter text="Команда" />
           <div className={styles.inner}>
@@ -156,49 +146,49 @@ const MainSection = () => {
             <div className={styles.bottom}>
               <div className={styles.item}>
                 <Image
-                  src={"/images/alihan.png"}
+                  src={"/images/tima.png"}
                   width={170}
                   height={170}
                   alt="staff"
                 />
-                <h2>Tuleubaev Alikhan</h2>
-                <h3>Fullstack</h3>
+                <h2>Kurmanbekov Timur</h2>
+                <h3>FullStack Developer</h3>
               </div>
               <div className={styles.item}>
                 <Image
-                  src={"/images/alihan.png"}
+                  src={"/images/artem.png"}
                   width={170}
                   height={170}
                   alt="staff"
                 />
-                <h2>Tuleubaev Alikhan</h2>
+                <h2>Kostin Artem</h2>
                 <h3>UI/IX Designer</h3>
               </div>
               <div className={styles.item}>
                 <Image
-                  src={"/images/alihan.png"}
+                  src={"/images/muha.png"}
                   width={170}
                   height={170}
                   alt="staff"
                 />
-                <h2>Tuleubaev Alikhan</h2>
-                <h3>CTO</h3>
+                <h2>Zaytin Nurmuhammed</h2>
+                <h3>SMM Specialist</h3>
               </div>
               <div className={styles.item}>
                 <Image
-                  src={"/images/alihan.png"}
+                  src={"/images/dias.png"}
                   width={170}
                   height={170}
                   alt="staff"
                 />
-                <h2>Tuleubaev Alikhan</h2>
-                <h3>SMM Specialist</h3>
+                <h2>Adilov Dias</h2>
+                <h3>CTO</h3>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className={styles.faq}>
+      <section id="faq" className={styles.faq}>
         <div className={"container"}>
           <TitleCenter text="FAQ" />
           <div className={styles.inner}>
@@ -241,7 +231,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className={styles.partners}>
+      <section id="partners" className={styles.partners}>
         <div className={"container"}>
           <TitleCenter text="Партнеры" />
           <div className={styles.inner}>
@@ -312,7 +302,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section className={styles.roadmap}>
+      <section id="roadmap" className={styles.roadmap}>
         <div className={"container"}>
           <Title text="Дорожная карта" />
           <div className={styles.inner}>
@@ -320,8 +310,8 @@ const MainSection = () => {
               src={"/images/roadmap.png"}
               alt="roadmap"
               style={{
-                width: '100%',
-                marginBottom: '50px'
+                width: "100%",
+                marginBottom: "50px",
               }}
             />
           </div>

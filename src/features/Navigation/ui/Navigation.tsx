@@ -75,9 +75,6 @@ const Navigation = () => {
           </div>
           {!show ? <div className={styles.two}>
             <h4 onClick={() => {itemLocationClick("Алматы")}}>Алматы</h4>
-            <h4 onClick={() => {itemLocationClick("Астана")}}>Астана</h4>
-            <h4 onClick={() => {itemLocationClick("Шымкент")}}>Шымкент</h4>
-            <h4 onClick={() => {itemLocationClick("Туркестан")}}>Туркестан</h4>
           </div> : ''}
         </div>
       </div>
@@ -105,7 +102,6 @@ const Navigation = () => {
             <h4 onClick={() => {itemAgeClick("Все")}}>Все</h4>
             <h4 onClick={() => {itemAgeClick("Молодые")}}>Молодые</h4>
             <h4 onClick={() => {itemAgeClick("Старые")}}>Старые</h4>
-
           </div> : ''}
         </div>
       </div>
