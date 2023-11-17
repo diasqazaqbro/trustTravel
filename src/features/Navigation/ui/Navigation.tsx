@@ -106,7 +106,7 @@ const Navigation = () => {
         </div>
       </div>
       
-      <Link href={'/attractions'} className={styles.search} onClick={submitButton}>
+      <Link href={'/attractions#tours'} className={styles.search} onClick={submitButton}>
         <Search />
       </Link>
     </div>

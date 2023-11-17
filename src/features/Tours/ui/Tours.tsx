@@ -1,11 +1,8 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import styles from "./Tours.module.sass";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import axios from "axios";
-import { Carousel } from "antd";
-import Image from "next/image";
 import { Location } from "@/shared/ui/Icon/Icon";
 
 // Типы
@@ -89,10 +86,8 @@ const Tours: React.FC = () => {
       });
   }, [categoryState, locationState, timeState, ageState]);
 
-  console.log(places);
-
   return (
-    <div className={styles.tours}>
+    <div id="tours" className={styles.tours}>
       {places.map((item, index) => (
         <div className={styles.item} key={index}>
           <div className={styles.row}>
