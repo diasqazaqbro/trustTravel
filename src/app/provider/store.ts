@@ -4,7 +4,7 @@ import { configureStore,combineReducers } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
   filtration: FiltrationSlice
-  },);
+},);
 
 export const store = configureStore({
     reducer: rootReducer,

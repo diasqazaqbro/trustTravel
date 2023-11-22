@@ -4,6 +4,7 @@ import styles from "./Tours.module.sass";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { Location } from "@/shared/ui/Icon/Icon";
+import Link from "next/link";
 
 // Типы
 interface Place {
@@ -12,6 +13,7 @@ interface Place {
   description: string;
   time: number;
   price: number;
+  id: number;
   // Добавьте другие поля, если необходимо
 }
 
@@ -31,7 +33,6 @@ const Tours: React.FC = () => {
   const ageState = useSelector((state: RootState) => state.filtration.age);
 
   const [places, setPlaces] = useState<Place[]>([]);
-
   useEffect(() => {
     const indexCategory = () => {
       let result = "";
@@ -39,7 +40,7 @@ const Tours: React.FC = () => {
         case "Культурный":
           result = "culture";
           break;
-        case "Веселый":
+        case "Развлекательный":
           result = "funny";
           break;
         case "Исторический":
@@ -89,7 +90,7 @@ const Tours: React.FC = () => {
   return (
     <div id="tours" className={styles.tours}>
       {places.map((item, index) => (
-        <div className={styles.item} key={index}>
+        <Link href={`/attractions/${item.id}`} className={styles.item} key={index}>
           <div className={styles.row}>
             <img src={item.image} alt={item.name} />
             <div className={styles.info}>
@@ -102,7 +103,7 @@ const Tours: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
