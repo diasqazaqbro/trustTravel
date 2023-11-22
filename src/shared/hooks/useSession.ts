@@ -1,5 +1,4 @@
 'use client'
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -27,7 +26,10 @@ const useSession = (): ISessionHook => {
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
 
   const getToken = (): string | null => {
-    return localStorage.getItem('auth_token') || "";
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      return localStorage.getItem('auth_token') || "";
+    }
+    return null;
   };
 
   const setSession = (newToken: string): void => {
