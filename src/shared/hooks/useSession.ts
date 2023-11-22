@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export interface UserProfile {
+export interface IUserProfile {
   avatar: string;
   email: string;
   favourite_list_id: string;
@@ -12,16 +12,16 @@ export interface UserProfile {
   username: string;
 }
 
-interface SessionHook {
-  user: UserProfile | null;
+interface ISessionHook {
+  user: IUserProfile | null;
   isAuthorized: boolean;
   getToken: () => string | null;
   setSession: (newToken: string) => void;
   clearSession: () => void;
 }
 
-const useSession = (): SessionHook => {
-  const [user, setUser] = useState<UserProfile | null>(null);
+const useSession = (): ISessionHook => {
+  const [user, setUser] = useState<IUserProfile | null>(null);
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
 
   const getToken = (): string | null => {
