@@ -22,8 +22,8 @@ const Header: React.FC<MyComponentProps> = ({ type, children }) => {
 
   return (
     <section className={styles.welcome}>
-      <div className="container">
-        <header className={styles.header}>
+      <header className={styles.header}>
+        <div className="container">
           <div className={styles.inner}>
             <Link href="/" className={styles.logo}>
               <Logo />
@@ -86,18 +86,30 @@ const Header: React.FC<MyComponentProps> = ({ type, children }) => {
               )}
             </div>
           </div>
-        </header>
-        {type != "login" ? (
-          <div className={styles.wrapper}>
-            <h1 className={styles.title}>
-              Путешествуйте с удовольствием, выбирайте TrusTTravel !
-            </h1>
+        </div>
+      </header>
+      {type != "login" ? (
+        <>
+          <div className="container">
+            <div className={styles.wrapper}>
+              <h1 className={styles.title}>
+                Путешествуйте с удовольствием, выбирайте TrusTTravel !
+              </h1>
+              <div className={styles.desc}>
+                <Navigation />
+              </div>
+            </div>
+          </div>
+          <div className={styles.mobile}>
+            <img src="" alt="" />
             <Navigation />
           </div>
-        ) : (
+        </>
+      ) : (
+        <div className="container">
           <div className={styles.wrapper}>{children}</div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 };

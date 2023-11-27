@@ -71,8 +71,8 @@ export default function Place({ params }: { params: { id: number } }) {
         {/* <div className={styles.info}></div> */}
 
         <div className="container">
-          <SpecialPlace />
-          <h2>Туры до {info.length > 0 ? info[0].name : ""}</h2>
+          {/* <SpecialPlace /> */}
+          <h5>Туры до {info.length > 0 ? info[0].name : ""}</h5>
           <div className={styles.filter}>
             <div className={styles.one}>
               <h3>

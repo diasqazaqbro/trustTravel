@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./styles/index.sass";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Providers } from "./provider/provider";
 const inter = Montserrat({ subsets: ["latin", "cyrillic"] });
 

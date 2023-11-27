@@ -125,8 +125,7 @@ const Tours: React.FC = () => {
     <div id="tours" className={styles.tours}>
       <Spin spinning={spinning} fullscreen />
       {places.map((item, index) => (
-        <Link
-          href={`/attractions/${item.id}`}
+        <div
           className={styles.item}
           key={index}
         >
@@ -148,7 +147,7 @@ const Tours: React.FC = () => {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
