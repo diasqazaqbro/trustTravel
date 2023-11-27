@@ -102,7 +102,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-      <section id="system" className={styles.system}>
+      {/* <section id="system" className={styles.system}>
         <div className={"container"}>
           <h1 className={styles.title}>
             Система <b>подбора</b> туров
@@ -126,7 +126,7 @@ const MainSection = () => {
             </Carousel>
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="teams" className={styles.teams}>
         <div className={"container"}>
           <TitleCenter text="Команда" />
@@ -236,67 +236,13 @@ const MainSection = () => {
           <TitleCenter text="Партнеры" />
           <div className={styles.inner}>
             <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
+            <img
+                src={"/partners/ino.png"}
               />
             </div>
             <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
-              />
-            </div>
-            <div className={styles.item}>
-              <Image
-                width={160}
-                height={160}
-                alt="partners"
-                src={"/images/easygroup.png"}
+              <img
+                src={"/partners/enactus.jpg"}
               />
             </div>
           </div>

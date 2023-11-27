@@ -38,6 +38,7 @@ const useSession = (): ISessionHook => {
 
   const clearSession = (): void => {
     localStorage.removeItem('auth_token');
+    setIsAuthorized(false)
     setUser(null);
   };
 

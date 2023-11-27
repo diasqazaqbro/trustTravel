@@ -2,15 +2,22 @@
 import useSession from "@/shared/hooks/useSession";
 import Layout from "@/widgets/Layout/Layout";
 import axios from "axios";
-import React, { useState } from "react";
+import { redirect } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 const Company: React.FC = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const { setSession, getToken } = useSession();
+  const { setSession, getToken,isAuthorized } = useSession();
 
+
+  useEffect(() => {
+    if (isAuthorized) {
+      redirect('/profile')
+    }
+  }, [isAuthorized])
   const handleRegistration = async () => {
     try {
       if (password !== confirmPassword) {
@@ -76,7 +83,7 @@ const Company: React.FC = () => {
   console.log(getToken());
 
   return (
-    <Layout>
+    <Layout type="login">
       <div className="login">
         <div className="form-container sign-in-container">
           <form action="#">

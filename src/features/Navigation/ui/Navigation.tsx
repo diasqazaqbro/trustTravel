@@ -104,8 +104,9 @@ const Navigation = () => {
           </div>
           {!showFour ? <div className={styles.show}>
             <h4 onClick={() => {itemAgeClick("Все")}}>Все</h4>
-            <h4 onClick={() => {itemAgeClick("Молодые")}}>Молодые</h4>
-            <h4 onClick={() => {itemAgeClick("Старые")}}>Старые</h4>
+            <h4 onClick={() => {itemAgeClick("Для молодых")}}>Для молодых</h4>
+            <h4 onClick={() => {itemAgeClick("Для зрелых")}}>Для зрелых</h4>
+            <h4 onClick={() => {itemAgeClick("Для пожилых")}}>Для пожилых</h4>
           </div> : ''}
         </div>
       </div>

@@ -1,15 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { ReactNode, useState } from "react";
 import styles from "./Header.module.sass";
 import { Logo, Naming } from "@/shared/ui/Icon/Icon";
 import NavBar from "@/entities/Navbar/Navbar";
 import Navigation from "@/features/Navigation/ui/Navigation";
 import Link from "next/link";
 import useSession from "@/shared/hooks/useSession";
-const Header = () => {
+import { MenuOutlined } from "@ant-design/icons";
+
+interface MyComponentProps {
+  children?: ReactNode;
+  type?: "login" | "profile";
+}
+
+const Header: React.FC<MyComponentProps> = ({ type, children }) => {
   const { getToken, isAuthorized } = useSession();
   const token = getToken();
+
+  const [navbar, setNavbar] = useState(false);
 
   return (
     <section className={styles.welcome}>
@@ -20,27 +29,74 @@ const Header = () => {
               <Logo />
               <Naming />
             </Link>
+            <div className={styles.block}>
+              {isAuthorized ? (
+                <>
+                  {/* <Link href={"/profile"}>
+                    <button className={styles.login}>Профиль</button>
+                  </Link> */}
+                </>
+              ) : (
+                <>
+                  <NavBar />
+                  {/* <Link href={"/login"}>
+                    <button className={styles.login}>Войти</button>
+                  </Link> */}
+                </>
+              )}
+            </div>
 
-            {isAuthorized ? (
-              <Link href={"/profile"}>
-              <button className={styles.login}>Профиль</button>
-            </Link>
-            ) : (
-              <>
-                <NavBar />
-                <Link href={"/login"}>
-                  <button className={styles.login}>Войти</button>
-                </Link>
-              </>
-            )}
+            <div className={styles.menu}>
+              <MenuOutlined
+                style={{ fontSize: "26px" }}
+                onClick={() => setNavbar(!navbar)}
+              />
+              {navbar ? (
+                <div className={styles.show}>
+                  {isAuthorized ? (
+                    <>
+                      {/* <Link href={"/profile"}>
+                      <button className={styles.login}>Профиль</button>
+                    </Link> */}
+                    </>
+                  ) : (
+                    <>
+                      <nav className={styles.nav}>
+                        <Link className={styles.link} href={"#about"}>
+                          О нас
+                        </Link>
+                        <Link className={styles.link} href={"#advantage"}>
+                          Преимущества
+                        </Link>
+                        <Link className={styles.link} href={"#game"}>
+                          Геймификация
+                        </Link>
+                        <Link className={styles.link} href={"#roadmap"}>
+                          Дорожная карта
+                        </Link>
+                      </nav>
+                      {/* <Link href={"/login"}>
+                        <button className={styles.login}>Войти</button>
+                      </Link> */}
+                    </>
+                  )}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         </header>
-        <div className={styles.wrapper}>
-          <h1 className={styles.title}>
-            Путешествуйте с удовольствием, выбирайте TrusTTravel !
-          </h1>
-          <Navigation />
-        </div>
+        {type != "login" ? (
+          <div className={styles.wrapper}>
+            <h1 className={styles.title}>
+              Путешествуйте с удовольствием, выбирайте TrusTTravel !
+            </h1>
+            <Navigation />
+          </div>
+        ) : (
+          <div className={styles.wrapper}>{children}</div>
+        )}
       </div>
     </section>
   );

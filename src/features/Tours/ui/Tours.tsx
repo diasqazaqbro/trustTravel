@@ -5,8 +5,8 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { Location } from "@/shared/ui/Icon/Icon";
 import Link from "next/link";
+import { Spin } from "antd";
 
-// Типы
 interface Place {
   name: string;
   image: string;
@@ -14,7 +14,6 @@ interface Place {
   time: number;
   price: number;
   id: number;
-  // Добавьте другие поля, если необходимо
 }
 
 interface RootState {
@@ -27,13 +26,26 @@ interface RootState {
 }
 
 const Tours: React.FC = () => {
-  const categoryState = useSelector((state: RootState) => state.filtration.category);
-  const locationState = useSelector((state: RootState) => state.filtration.location);
+  const categoryState = useSelector(
+    (state: RootState) => state.filtration.category
+  );
+  const locationState = useSelector(
+    (state: RootState) => state.filtration.location
+  );
   const timeState = useSelector((state: RootState) => state.filtration.time);
   const ageState = useSelector((state: RootState) => state.filtration.age);
 
   const [places, setPlaces] = useState<Place[]>([]);
+  const [spinning, setSpinning] = React.useState<boolean>(false);
+
   useEffect(() => {
+    const showLoader = () => {
+      setSpinning(true);
+      if (places.length > 0) {
+        setSpinning(false);
+      }
+    };
+    showLoader();
     const indexCategory = () => {
       let result = "";
       switch (categoryState) {
@@ -77,29 +89,62 @@ const Tours: React.FC = () => {
       }
       return result;
     };
+    const indexAge = () => {
+      let result = "";
+      switch (ageState) {
+        case "Все":
+          result = "any";
+          break;
+        case "Для молодых":
+          result = "young";
+          break;
+        case "Для зрелых":
+          result = "mature";
+          break;
+        case "Для пожилых":
+          result = "middle";
+          break;
+        default:
+          result = "any";
+          break;
+      }
+      return result;
+    };
 
     axios
       .get(
-        `https://timkaqwerty.pythonanywhere.com/api/places/almaty?format=json&wonder=${indexCategory()}&time=${indexTime()}`
+        `https://timkaqwerty.pythonanywhere.com/api/places/almaty?format=json&wonder=${indexCategory()}&time=${indexTime()}&age=${indexAge()}`
       )
       .then((response) => {
         setPlaces(response.data.results);
+        console.log(response.data.results);
       });
-  }, [categoryState, locationState, timeState, ageState]);
+  }, [categoryState, locationState, timeState, ageState, places]);
 
   return (
     <div id="tours" className={styles.tours}>
+      <Spin spinning={spinning} fullscreen />
       {places.map((item, index) => (
-        <Link href={`/attractions/${item.id}`} className={styles.item} key={index}>
+        <Link
+          href={`/attractions/${item.id}`}
+          className={styles.item}
+          key={index}
+        >
           <div className={styles.row}>
             <img src={item.image} alt={item.name} />
             <div className={styles.info}>
               <h2>{item.name}</h2>
-              <h4><Location/> Алматы</h4>
+              <h4>
+                <Location /> Алматы
+              </h4>
               <p>{item.description}</p>
               <div className={styles.about}>
-                <h5><Location/> от центра {item.time} минут.</h5>
-                <h5><Location/> цена {item.price} тг.</h5>
+                <h5>
+                  <Location /> от центра {item.time} минут.
+                </h5>
+                <h5>
+                  <Location /> цена {item.price} тг.
+                </h5>
               </div>
             </div>
           </div>

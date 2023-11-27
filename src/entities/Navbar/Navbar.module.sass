@@ -1,4 +1,13 @@
 .nav
+    position: relative
+    &::after
+        content: ''
+        display: block
+        width: 95%
+        height: 1px
+        bottom: -15px
+        position: absolute
+        background: #FFF
     .link
         color: var(--color-dark)
         font-size: 18px
@@ -6,7 +15,21 @@
         font-weight: 400
         line-height: normal
         margin-right: 35px
-@media only screen and (max-width: 600px)
-    .nav
-        .link
-            display: none
+    .active
+        color: var(--color-dark)
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-right: 35px
+        &::after
+            content: ''
+            display: block
+            width: 61.191px
+            height: 5px
+            flex-shrink: 0
+            border-radius: 10px
+            background: #01A0C7
+            bottom: -18px
+            z-index: 999
+            position: absolute

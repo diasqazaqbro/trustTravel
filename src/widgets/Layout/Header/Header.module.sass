@@ -2,7 +2,36 @@
     .inner
         align-items: center
         display: flex
-        justify-content: space-between
+        justify-content: space-evenly
+        .block
+            display: block
+            align-items: center
+            display: flex
+            justify-content: space-between
+        .menu
+            display: none
+            position: relative
+            .show
+                border-radius: 20px
+                background: rgba(0, 0, 0, 0.30)
+                position: absolute
+                backdrop-filter: blur(7.5px)
+                top: 30px
+                padding: 20px 30px
+                right: -10px
+                z-index: 999
+                .nav
+                    display: flex
+                    flex-direction: column
+                    .link
+                        color: var(--color-white)
+                        text-align: left
+                        font-size: 16px
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 150%
+                        letter-spacing: 0.96px
+                        margin: 10px 0
         .logo
             display: flex
             align-items: center
@@ -17,6 +46,7 @@
             outline: none
             border: none
             padding: 12px 31px
+            cursor: pointer
 
 .welcome
     background-image: url('/images/welcome.png')
@@ -35,11 +65,12 @@
 @media only screen and (max-width: 600px)
     .header
         .inner
-            button
+            .menu
+                display: block
+            .block
                 display: none
     .welcome
         .wrapper
             padding-bottom: 100px
             .title
                 font-size: 24px
-            

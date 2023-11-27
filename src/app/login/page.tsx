@@ -1,12 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.scss";
 import Layout from "@/widgets/Layout/Layout";
 import Link from "next/link";
+import useSession from "@/shared/hooks/useSession";
+import { redirect } from "next/navigation";
 
-const SignInUpForm = () => {
+const Login = () => {
   const [isRightPanelActive, setRightPanelActive] = useState(false);
+
+  const {isAuthorized}= useSession()
+
+  useEffect(() => {
+    if (isAuthorized) {
+      redirect('/profile')
+    }
+  }, [isAuthorized])
 
   const handleSignUpClick = () => {
     setRightPanelActive(true);
@@ -15,9 +25,9 @@ const SignInUpForm = () => {
   const handleSignInClick = () => {
     setRightPanelActive(false);
   };
-
+  
   return (
-    <Layout>
+    <Layout type="login">
       <div className="login">
         <div
           className={`container ${
@@ -80,4 +90,4 @@ const SignInUpForm = () => {
   );
 };
 
-export default SignInUpForm;
+export default Login;

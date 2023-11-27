@@ -116,7 +116,7 @@ $secondary-color: #ffffff;
       margin: 10px 0;
       border-radius: 20px;
       padding: 20px;
-      box-shadow: 4px 5px 40px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.10);
+      box-shadow: 4px 5px 40px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.1);
       img {
         width: 200px;
       }
@@ -216,48 +216,54 @@ $secondary-color: #ffffff;
     right: 0;
     transform: translateX(0);
   }
+}
 
-  .container.right-panel-active .overlay-right {
-    transform: translateX(20%);
-  }
+@media only screen and (max-width: 600px) {
+  .login {
+    margin-top: 0px;
+    p {
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      margin: 10px 0 10px;
+    }
 
-  .social-container {
-    margin: 20px 0;
-  }
+    span {
+      font-size: 10px;
+    }
 
-  .social-container a {
-    border: 1px solid #dddddd;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
-  }
+    a {
+      font-size: 12px;
+      margin: 10px 0;
+    }
 
-  footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-  }
+    button {
+      font-size: 10px;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
 
-  footer p {
-    margin: 10px 0;
-  }
+    form {
+      padding: 0 20px;
+    }
 
-  footer i {
-    color: red;
-  }
+    input {
+      padding: 10px 10px;
+    }
 
-  footer a {
-    color: #3c97bf;
-    text-decoration: none;
+    .sign-up-container {
+      
+      .item {
+        width: 100%;
+        margin:5px 0;
+        border-radius: 20px;
+        padding: 10px;
+        img {
+          width: 100%;
+        }
+        h5 {
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

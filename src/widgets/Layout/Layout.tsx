@@ -4,13 +4,25 @@ import Footer from "./Footer/Footer";
 
 interface MyComponentProps {
   children: ReactNode;
+  type?: "login" | "profile";
 }
-const Layout: React.FC<MyComponentProps> = ({children}) => {
+const Layout: React.FC<MyComponentProps> = ({ children, type }) => {
   return (
     <main className="main">
-      <Header/>
-      {children}
-      <Footer/>
+      {type == "login" || type == "profile" ? (
+        <>
+          <Header type={type}>
+            {children}
+          </Header>
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Header type={type} />
+          {children}
+          <Footer />
+        </>
+      )}
     </main>
   );
 };

@@ -1,19 +1,21 @@
 "use client";
 import useSession, { IUserProfile } from "@/shared/hooks/useSession";
 import Layout from "@/widgets/Layout/Layout";
+import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const Profile = () => {
   const [profile, setProfile] = useState<IUserProfile | null>();
-  const { user } = useSession();
+  const { user, isAuthorized, clearSession } = useSession();
+  
   useEffect(() => {
     setProfile(user);
-  }, [user]);
+  }, [user,isAuthorized]);
 
   return (
     <Layout>
       <div className="container">
-        <h2>Профиль пользователя</h2>
+        {isAuthorized ? <> <h2>Профиль пользователя</h2>
         {profile != null ? (
           <>
           <img src={profile.avatar} alt="User Avatar" />
@@ -30,10 +32,14 @@ const Profile = () => {
               <strong>Телефон:</strong>{" "}
               {profile.phone_number || "Нет информации"}
             </p>
+            <button onClick={() => {
+              clearSession()
+              redirect('/')
+            }}>Выйти</button>
           </>
         ) : (
-          ""
-        )}
+          "loading..."
+        )}</> : 'у тебя нет профиля, ты не зареган сушка'}
       </div>
     </Layout>
   );
