@@ -4,10 +4,12 @@ import React, { ReactNode, useState } from "react";
 import styles from "./Header.module.sass";
 import { Logo, Naming } from "@/shared/ui/Icon/Icon";
 import NavBar from "@/entities/Navbar/Navbar";
-import Navigation from "@/features/Navigation/ui/Navigation";
+// import Navigation from "@/features/Navigation/ui/Navigation";
 import Link from "next/link";
 import useSession from "@/shared/hooks/useSession";
 import { MenuOutlined } from "@ant-design/icons";
+import FindTour from "@/features/FindTour/ui/FindTour";
+import { Switch } from "@/features/Switch/ui/Switch";
 
 interface MyComponentProps {
   children?: ReactNode;
@@ -95,14 +97,18 @@ const Header: React.FC<MyComponentProps> = ({ type, children }) => {
               <h1 className={styles.title}>
                 Путешествуйте с удовольствием, выбирайте TrusTTravel !
               </h1>
+              <div className={styles.switch}>
+                <Switch />
+              </div>
               <div className={styles.desc}>
-                <Navigation />
+                <FindTour />
               </div>
             </div>
           </div>
           <div className={styles.mobile}>
             <img src="" alt="" />
-            <Navigation />
+            <Switch />
+            <FindTour />
           </div>
         </>
       ) : (

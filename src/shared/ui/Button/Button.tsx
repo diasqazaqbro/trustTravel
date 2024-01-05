@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { FC, MouseEventHandler } from 'react'
+import cn from 'classnames'
 
-const Button = () => {
+import style from './Button.module.sass'
+
+export type ButtonProps = {
+  text: string;
+  className: string;
+  onClick?: MouseEventHandler;
+  disabled: boolean
+}
+
+const Button: FC<ButtonProps> = (props) => {
+  const { text, className, onClick, disabled } = props
+
   return (
-    <div>Button</div>
+    <button 
+      className={cn(className, style.button, "button")}
+      onClick={onClick}
+      disabled={disabled}
+    >{text}</button>
   )
 }
 
