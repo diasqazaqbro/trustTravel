@@ -11,6 +11,7 @@ import Button from '@/shared/ui/Button/Button';
 import BasicRating from '@/shared/ui/Rating/Rating';
 import Title from '@/shared/ui/Title/Title';
 import Image from 'next/image';
+import Footer from '../Layout/Footer/Footer';
 
 const ToursCheck = () => {
   const [navbar, setNavbar] = useState(false);
@@ -114,7 +115,7 @@ const ToursCheck = () => {
         </div>
       </section>
 
-
+      <Footer />
     </>
   );
 };
