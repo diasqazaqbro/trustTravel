@@ -1,0 +1,191 @@
+.header
+  .inner
+      align-items: center
+      display: flex
+      justify-content: space-between
+      margin-bottom: 75px
+      .block
+        display: block
+        align-items: center
+        display: flex
+        justify-content: space-between
+        .nav__link
+          color: white
+          text-decoration: none
+      .menu
+        display: none
+        position: relative
+        .show
+          border-radius: 20px
+          background: rgba(0, 0, 0, 0.30)
+          position: absolute
+          backdrop-filter: blur(7.5px)
+          top: 30px
+          padding: 20px 30px
+          right: -10px
+          z-index: 999
+          .nav 
+            display: flex
+            flex-direction: column
+            .link
+              color: var(--color-white)
+              text-align: left
+              text-decoration: none
+              font-size: 16px
+              font-style: normal
+              font-weight: 500
+              line-height: 150%
+              letter-spacing: 0.96px
+              margin: 10px 0
+      .logo
+        display: flex
+        align-items: center
+      button
+        border-radius: 10px
+        background: var(--color-primary)
+        color: #FFF
+        font-size: 18px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        outline: none
+        border: none
+        padding: 12px 31px
+        cursor: pointer
+
+// Сам тур 
+
+.tour__header
+  background: url('/images/tour_header.png') lightgray 0px 0px / 100% 110.893% no-repeat
+  background-size: cover
+  padding-bottom: 100px
+
+.tour__title
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: 1fr
+  grid-gap: 117px
+  .tour__desc
+    // margin-right: 117px
+    h1
+      color: var(--color-white)
+      font-size: 40px
+      font-style: normal
+      margin-bottom: 58px
+      font-weight: 500
+      line-height: normal
+    p
+      color: var(--color-white)
+      font-size: 20px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+  .tour__buy
+    // margin-bottom: 100px
+    img
+      margin-bottom: 31px
+    h5
+      color: var(--color-white)
+      font-style: normal
+      font-size: 24px
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 12px
+    h1
+      color: var(--color-white)
+      font-size: 48px
+      font-style: normal
+      font-weight: 600
+      line-height: normal
+      margin-bottom: 20px   
+    button
+      border-radius: 10px
+      color: var(--color-white)
+      font-size: 24px
+      font-style: normal
+      font-weight: 600
+      line-height: normal
+    .tour__buying
+      padding: 18px 52px
+      margin-right: 17.71px
+      background: var(--color-primary)
+    .tour__basket
+      background: #132950
+      padding: 18px 36px 18px 52px
+
+.tour__info
+  background: var(--color-white)
+  padding-top: 60px
+
+.tour__info_help
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 117px
+  .tour__help_left
+    h1
+      color: #000
+      font-size: 40px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 20px
+    p
+      color: #000
+      font-size: 20px
+      font-style: normal
+      // width: 651.214px
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 30px
+    h4
+      color: #000
+      font-size: 20px
+      font-style: normal
+      font-weight: 500
+      margin-bottom: 30px
+      line-height: normal
+      span
+        color: #000
+        font-size: 22px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+  .tour__help_right
+    padding-top: 11px
+
+.tour__map
+  padding: 0 18px 16.3px 18px
+  background: #132950
+  width: 466px
+  border-radius: 20px
+  margin-bottom: 75px
+  h1
+    color: var(--color-white)
+    font-size: 24px
+    font-style: normal
+    padding-top: 15px
+    margin-bottom: 10px
+    font-weight: 500
+    line-height: normal
+  .tour__sight_map
+    width: 430px
+    height: 235px
+
+.tour__grade
+  display: flex
+  h5
+    color: #000
+    font-size: 26px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    margin-right: 16px
+
+@media only screen and (max-width: 600px)
+  .header
+    .inner
+      .menu
+        display: block
+      .block
+        display: none
+

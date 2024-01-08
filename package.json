@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.3",
     "@reduxjs/toolkit": "^1.9.7",
     "and": "^0.0.3",
     "antd": "^5.11.1",
