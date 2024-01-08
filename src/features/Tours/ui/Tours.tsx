@@ -129,6 +129,7 @@ const Tours: React.FC = () => {
           className={styles.item}
           key={index}
         >
+        <Link href={'/tourscheck'}>
           <div className={styles.row}>
             <img src={item.image} alt={item.name} />
             <div className={styles.info}>
@@ -147,6 +148,7 @@ const Tours: React.FC = () => {
               </div>
             </div>
           </div>
+          </Link>
         </div>
       ))}
     </div>
