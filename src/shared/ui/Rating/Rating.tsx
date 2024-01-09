@@ -22,6 +22,6 @@ export default function BasicRating() {
 export const ReleatedRating = () => {
   return (
     // <Rating name="no-value" value={null} style={{ fontSize: '32px', flexDirection: 'column-reverse' }} />
-    <Rate character={<StarTwoTone className='grade_rate' />} allowHalf style={{fontSize: '40px', display: 'inline-flex', flexDirection: 'column-reverse'}}/>
+    <Rate character={<StarTwoTone className='grade_rate' />} allowHalf style={{ display: 'inline-flex', flexDirection: 'column-reverse' }} className='star__grade'/>
     )
 }

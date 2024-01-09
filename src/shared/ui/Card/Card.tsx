@@ -63,6 +63,7 @@ export const Card:FC<CardProps> = (props) => {
             <div className={styles.card__item_main}>
               <div className={styles.img__block}>
                 <h2><Location /> Алмата</h2>
+                <ReleatedRating />
               </div>
               <div className={styles.card__item_btn}>
                 <Button className={styles.btn__mobile} text='К' disabled={false} />
