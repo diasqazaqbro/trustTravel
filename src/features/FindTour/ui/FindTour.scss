@@ -169,7 +169,11 @@
                         font-weight: 500;
                         line-height: normal;
                         // margin-left: 39px;
-                        padding: 9px 0px 9px 16.5px;
+                        padding: 9px 0px 10px 16.5px;
+                        margin-bottom: 0;
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.1);
+                        }
                     }
                     &::-webkit-scrollbar {
                         width: 2px;
@@ -259,6 +263,9 @@
                         font-size: 15px;
                         margin-left: 0px;
                         padding-left: 40px;
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.1);
+                        }
                     }
                 }
             }

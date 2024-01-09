@@ -105,6 +105,9 @@
       font-style: normal
       font-weight: 600
       line-height: normal
+      transition: all 0.3s ease
+      &:hover
+        transform: scale(1.05)
     .tour__buying
       padding: 18px 52px
       margin-right: 17.71px
@@ -181,6 +184,9 @@
     line-height: normal
     margin-right: 16px
 
+.mobile
+  display: none
+
 @media only screen and (max-width: 600px)
   .header
     .inner
@@ -188,4 +194,124 @@
         display: block
       .block
         display: none
+  // Десктоп
+  .tour__header
+    display: none
+  .tour__info
+    display: none
+  // Десктоп
 
+  // Мобилка
+  .mobile
+    display: block
+    .mobile__tour_header
+      background: url('/images/tour_header.png') lightgray 0px 0px / 100% 110.893% no-repeat
+      background-size: cover
+      padding-bottom: 100px
+      .mobile__tour_title
+        h1
+          color: var(--color-white)
+          font-size: 32px
+          font-style: normal
+          font-weight: 500
+          line-height: normal
+          text-align: center
+          margin-bottom: 39.5px
+        p
+          color: var(--color-white)
+          text-align: center
+          font-size: 21px
+          font-style: normal
+          font-weight: 400
+          line-height: 120%
+      .mobile__tour_more
+        margin-top: 30px
+        padding-left: 12px
+        h4
+          color: var(--color-white)
+          font-size: 12px
+          font-style: normal
+          font-weight: 500
+          line-height: normal
+          span
+            color: var(--color-white)
+            font-size: 12px
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+  .img
+    margin-top: 45px
+    border-radius: 5px
+
+  .mobile__tour_info
+    background: var(--color-primary)
+    box-shadow: 0px -32px 16px 6px var(--color-primary)
+    padding-bottom: 70px
+    .mobile__info_title
+      padding-top: 70px
+      h1
+        color: var(--color-white)
+        text-align: center
+        font-size: 28px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+        margin-bottom: 20px
+      p
+        color: var(--color-white)
+        text-align: center
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+      h4
+        color: var(--color-white)
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        margin-bottom: 20px
+        line-height: normal
+        text-align: center
+        span
+          color: var(--color-white)
+          font-size: 20px
+          font-style: normal
+          font-weight: 600
+          line-height: normal
+          text-align: center
+    .map_center
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      padding-top: 7px
+      .mobile__map
+        border-radius: 20px
+        background: #132950
+        width: 312.966px
+        padding: 15.75px 12px 11px 12px
+        h5
+          color: var(--color-white)
+          font-size: 15px
+          font-style: normal
+          text-align: center
+          font-weight: 600
+          line-height: normal
+      .mobile__grade
+        margin-top: 32px
+        display: flex
+        h5
+          color: var(--color-white)
+          font-size: 16px
+          font-style: normal
+          font-weight: 500
+          line-height: normal
+          margin-right: 12px
+
+
+  .mobile__tour_img
+    display: flex
+    justify-content: center
+    align-items: center
+  .container__info
+    padding: 0 35px 0 35px
