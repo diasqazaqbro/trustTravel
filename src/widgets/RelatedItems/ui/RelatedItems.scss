@@ -1,0 +1,13 @@
+.related__items-inner {
+  padding: 0px 125px 0 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  .related__items-inner {
+    padding: 0;
+  }
+  // .container {
+  //   padding: 0;
+  //   margin: 0;
+  // }
+}

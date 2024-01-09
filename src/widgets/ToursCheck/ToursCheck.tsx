@@ -5,13 +5,15 @@ import Link from 'next/link';
 import image from '../../../public/images/tour_img.png'
 import styles from './ToursCheck.module.sass';
 import NavBar from '@/entities/Navbar/Navbar';
-import { Logo, Naming } from '@/shared/ui/Icon/Icon';
+import { ListIcon, ListIconGrid, Logo, Naming } from '@/shared/ui/Icon/Icon';
 import { MenuOutlined } from '@ant-design/icons';
 import Button from '@/shared/ui/Button/Button';
 import BasicRating from '@/shared/ui/Rating/Rating';
 import Title from '@/shared/ui/Title/Title';
 import Image from 'next/image';
 import Footer from '../Layout/Footer/Footer';
+import { RelatedItems } from '../RelatedItems/ui/RelatedItems';
+import { Filter } from '@/shared/ui/Filter/Filter';
 
 const ToursCheck = () => {
   const [navbar, setNavbar] = useState(false);
@@ -115,6 +117,25 @@ const ToursCheck = () => {
         </div>
       </section>
 
+      <section className={styles.related__items} >
+        <div className='container'>
+          <h1>Похожие туры</h1>
+          <div className={styles.related__items_filter}>
+            <div className={styles.card__filter}>
+              <h5>Высокий рейтинг</h5>
+              <Filter className={styles.filtered}/>
+            </div>
+            <div className={styles.card__position}>
+              <ListIcon />
+              <ListIconGrid />
+            </div>
+          </div>
+        </div>
+        <RelatedItems />
+        <RelatedItems />
+        <RelatedItems />
+      </section>
+
 
       <div className={styles.mobile}>
         <section className={styles.mobile__tour_header}>
@@ -179,6 +200,7 @@ const ToursCheck = () => {
           </div>
         </section>
 
+      <main className={styles.mobile__main}>
         <section className={styles.mobile__tour_info}>
           <div className={styles.container__info}>
             <div className={styles.mobile__info_title}>
@@ -204,6 +226,24 @@ const ToursCheck = () => {
             </div>
           </div>
         </section>
+
+        <section className={styles.related__items_mobile}>
+          <div className={styles.container__related}>
+            <h1>Похожие туры</h1>
+            <div className={styles.card__filter}>
+              <h5>Высокий рейтинг</h5>
+              <Filter className={styles.filtered}/>
+            </div>
+            <div className={styles.card__mobile}>
+              <RelatedItems />
+              <RelatedItems />
+              <RelatedItems />
+              <RelatedItems />
+            </div>
+          </div>
+        </section>
+      </main>
+        
       </div>
 
       <Footer />

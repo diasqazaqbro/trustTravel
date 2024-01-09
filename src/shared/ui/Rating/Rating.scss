@@ -1,0 +1,10 @@
+.grade_rate {
+  svg {
+    path {
+      fill: transparent;
+      &:nth-child(2) {
+        fill: #fff;
+      }
+    }
+  }
+}

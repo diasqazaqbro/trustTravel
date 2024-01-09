@@ -125,6 +125,7 @@
   grid-template-columns: repeat(2, 1fr)
   grid-gap: 117px
   .tour__help_left
+    margin-bottom: 80px
     h1
       color: #000
       font-size: 40px
@@ -184,10 +185,39 @@
     line-height: normal
     margin-right: 16px
 
+.related__items
+  h1
+    color: #000
+    font-size: 36px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    margin-bottom: 65px
+  .related__items_filter
+    margin-bottom: 22px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .card__filter
+      display: flex
+      h5
+        color: #000
+        font-size: 20px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+      .filtered
+        margin-left: 18.2px
+    .card__position
+      position: relative
+      left: -150px
+      svg
+        margin-right: 28px
+
 .mobile
   display: none
 
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 700px)
   .header
     .inner
       .menu
@@ -198,6 +228,8 @@
   .tour__header
     display: none
   .tour__info
+    display: none
+  .related__items
     display: none
   // Десктоп
 
@@ -242,76 +274,116 @@
   .img
     margin-top: 45px
     border-radius: 5px
-
-  .mobile__tour_info
-    background: var(--color-primary)
-    box-shadow: 0px -32px 16px 6px var(--color-primary)
-    padding-bottom: 70px
-    .mobile__info_title
-      padding-top: 70px
-      h1
-        color: var(--color-white)
-        text-align: center
-        font-size: 28px
-        font-style: normal
-        font-weight: 500
-        line-height: normal
-        margin-bottom: 20px
-      p
-        color: var(--color-white)
-        text-align: center
-        font-size: 18px
-        font-style: normal
-        font-weight: 500
-        line-height: normal
-      h4
-        color: var(--color-white)
-        font-size: 18px
-        font-style: normal
-        font-weight: 500
-        margin-bottom: 20px
-        line-height: normal
-        text-align: center
-        span
-          color: var(--color-white)
-          font-size: 20px
-          font-style: normal
-          font-weight: 600
-          line-height: normal
-          text-align: center
-    .map_center
-      display: flex
-      justify-content: center
-      flex-direction: column
-      align-items: center
-      padding-top: 7px
-      .mobile__map
-        border-radius: 20px
-        background: #132950
-        width: 312.966px
-        padding: 15.75px 12px 11px 12px
-        h5
-          color: var(--color-white)
-          font-size: 15px
-          font-style: normal
-          text-align: center
-          font-weight: 600
-          line-height: normal
-      .mobile__grade
-        margin-top: 32px
-        display: flex
-        h5
-          color: var(--color-white)
-          font-size: 16px
-          font-style: normal
-          font-weight: 500
-          line-height: normal
-          margin-right: 12px
-
-
   .mobile__tour_img
     display: flex
     justify-content: center
     align-items: center
-  .container__info
+
+  .mobile__main
+    background: var(--color-primary)
+    box-shadow: 0px -32px 16px 6px var(--color-primary)
+    .mobile__tour_info
+      padding-bottom: 70px
+      .container__info
+        padding: 0 35px 0 35px
+        .mobile__info_title
+          padding-top: 70px
+          h1
+            color: var(--color-white)
+            text-align: center
+            font-size: 28px
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            margin-bottom: 20px
+          p
+            color: var(--color-white)
+            text-align: center
+            font-size: 18px
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+          h4
+            color: var(--color-white)
+            font-size: 18px
+            font-style: normal
+            font-weight: 500
+            margin-bottom: 20px
+            line-height: normal
+            text-align: center
+            span
+              color: var(--color-white)
+              font-size: 20px
+              font-style: normal
+              font-weight: 600
+              line-height: normal
+              text-align: center
+        .map_center
+          display: flex
+          justify-content: center
+          flex-direction: column
+          align-items: center
+          padding-top: 7px
+          .mobile__map
+            border-radius: 20px
+            background: #132950
+            width: 312.966px
+            padding: 15.75px 12px 11px 12px
+            h5
+              color: var(--color-white)
+              font-size: 15px
+              font-style: normal
+              text-align: center
+              font-weight: 600
+              line-height: normal
+          .mobile__grade
+            margin-top: 32px
+            display: flex
+            h5
+              color: var(--color-white)
+              font-size: 16px
+              font-style: normal
+              font-weight: 500
+              line-height: normal
+              margin-right: 12px
+
+.related__items_mobile
+  h1
+    color: var(--color-white)
+    text-align: center
+    font-size: 32px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    margin-bottom: 14px
+  .card__filter
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-bottom: 33.4px
+    h5
+      color: var(--color-white)
+      text-align: center
+      font-size: 14px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      margin-right: 8.3px
+    svg
+      position: relative
+      top: -4px
+      path 
+        fill: #fff
+
+  .card__mobile
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    // grid-column-gap: 25px
+    grid-template-rows: 1fr 25px 1fr
+
+  
+  
+  .container__related
     padding: 0 35px 0 35px
+  .mobile__main
+    background: var(--color-primary)

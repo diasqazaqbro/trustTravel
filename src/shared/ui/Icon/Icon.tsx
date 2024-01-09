@@ -398,3 +398,26 @@ export const GridIcon = () => {
     </svg>
   );
 };
+
+export const ListIcon = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+      <g clip-path="url(#clip0_919_343)">
+        <path d="M0.96582 4.99806H26.6491V0.328369H0.96582V4.99806ZM0.96582 15.5049H26.6491V10.8352H0.96582V15.5049ZM0.96582 26.0117H26.6491V21.342H0.96582V27.1791V26.0117Z" fill="black"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_919_343">
+          <rect width="25.6833" height="25.6833" fill="white" transform="translate(0.96582 0.328369)"/>
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const ListIconGrid = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+      <path d="M6.78997 6.74919H0.369141V0.328369H6.78997V6.74919ZM16.4212 0.328369H10.0004V6.74919H16.4212V0.328369ZM26.0524 0.328369H19.6316V6.74919H26.0524V0.328369ZM6.78997 9.95961H0.369141V16.3804H6.78997V9.95961ZM16.4212 9.95961H10.0004V16.3804H16.4212V9.95961ZM26.0524 9.95961H19.6316V16.3804H26.0524V9.95961ZM6.78997 19.5908H0.369141V26.0117H6.78997V19.5908ZM16.4212 19.5908H10.0004V26.0117H16.4212V19.5908ZM26.0524 19.5908H19.6316V26.0117H26.0524V19.5908Z" fill="black"/>
+    </svg>
+  )
+}

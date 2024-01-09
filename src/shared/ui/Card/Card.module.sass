@@ -1,0 +1,182 @@
+.card
+  list-style: none
+  border-radius: 20px
+  
+.card__link
+  border-radius: 20px
+  text-decoration: none
+
+.card__item
+  text-decoration: none
+  border-radius: 20px
+  margin-bottom: 39px
+  background: #EBEBEB
+  display: flex
+  // padding: 20px 0px 20px 20px
+  .img
+    width: 400px
+    height: 200px
+    background: var(--color-primary)
+    border-radius: 10px
+    display: flex
+    align-items: center
+    margin: 20px 0 20px 20px
+    justify-content: center
+  .card__item_left
+    margin-left: 44px
+    padding-top: 15px 
+    // margin-bottom: 35px
+    width: 100%
+    h1
+      color: #000
+      font-size: 32px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 10px
+    h5
+      color: #000
+      font-size: 16px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 14px
+      svg
+        margin-right: 5px
+    .card__item_desc
+      margin-bottom: 8px
+      display: flex
+      .line
+        border: 3px solid var(--color-primary) 
+        border-radius: 10px
+        margin-right: 16px
+        margin-top: 6px
+        margin-bottom: 25px
+      p
+        color: #000
+        font-size: 15px
+        font-style: normal
+        width: 446.697px
+        font-weight: 500
+        line-height: normal
+    .card__item_info
+      display: flex
+      h2
+        color: #000
+        font-size: 18px
+        text-align: center
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        margin-right: 15px
+        margin-bottom: 0
+        svg
+          width: 20px
+          height: 20px
+          position: relative
+          top: -2px
+          margin-right: 2px
+          path 
+            fill: #000
+      .line
+        border: 2px solid var(--color-primary) 
+        border-radius: 10px
+        margin-bottom: 0px
+        margin-right: 15px
+
+.card__item_right
+  margin-left: 100px
+  padding-top: 20px
+  h1
+    color: #000
+    font-size: 30px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    margin-bottom: 99px
+  .card__item_btn
+    display: flex
+    .btn__wishlist
+      padding: 10px 21px
+      border-radius: 10px
+      background: var(--color-primary)   
+      color: var(--color-white)
+      font-size: 24px
+      font-style: normal
+      font-weight: 600
+      line-height: normal
+
+.card__item_grade
+  border-radius: 0px 20px 20px 0px
+  background: #132950
+  // height: 100%
+  margin-left: 37px
+  padding-left: 6px
+  padding-top: 14px
+  padding-bottom: 14px 
+
+.mobile
+  display: none
+
+@media only screen and (max-width: 700px)
+  .mobile
+    display: block
+
+  .container__item
+    display: none
+
+  .card__link 
+    text-decoration: none
+
+  .card__item
+    background: #fff
+    border-radius: 15px
+    display: block
+    margin-bottom: 20px
+    padding: 12px 10px 10.3px 10px
+    .card__item_main
+      display: flex
+      .img__block
+        border-radius: 5px
+        background: var(--color-primary)
+        width: 86.87px
+        height: 87.062px
+        h2
+          padding-left: 5.5px
+          position: relative
+          top: 70px
+          color: var(--color-white)
+          font-size: 8px
+          font-style: normal
+          font-weight: 500
+          line-height: normal
+          svg
+            width: 8px
+            height: 7px
+      .card__item_btn
+        display: flex
+        flex-direction: column
+        margin-left: 5.6px
+        .btn__mobile
+          padding: 1px 7px
+          border-radius: 5px
+          background: var(--color-primary)
+          color: var(--color-white)
+          margin-bottom: 4px
+
+.__item_info
+  margin-top: 6.7px
+  h2
+    color: #000
+    font-size: 11px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    margin-bottom: 2px
+  h3
+    color: #000
+    font-size: 16px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    margin-bottom: 0
