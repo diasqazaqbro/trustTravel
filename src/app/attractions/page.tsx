@@ -8,7 +8,7 @@ export default function Attractions() {
       <Layout>
         <div className="container">
           <section className={style.attractions}>
-            <TitleCenter text="Достопримечательности" />
+            <h1 className={style.attractions__title}>Достопримечательности</h1>
             <Tours/>
           </section>
         </div>

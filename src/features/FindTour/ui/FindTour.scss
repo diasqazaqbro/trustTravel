@@ -109,7 +109,7 @@
 .mobile {
     display: none;
     .filtration {
-        background: url('/images/ticket.png');
+        // background: url('/images/ticket.png');
         background-repeat: no-repeat;
         height: 310px;
         width: auto;
@@ -117,7 +117,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 35px;
-        padding: 35px 65px;
+        padding: 35px 35px;
 
         .block {
             .name {
@@ -217,8 +217,9 @@
 
         .second__col {
             display: flex;
+            // display: grid;
+            // grid-template-columns: repeat(2, 1fr);
             margin-bottom: 40px;
-            
             &:last-child {
                 margin-right: 0;
             }
@@ -335,6 +336,12 @@
         align-items: center;
     }
 
+    // .mobile__circle {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    // }
+
     .tablet {
         display: none;
     }
@@ -428,3 +435,5 @@
         display: block;
     }
 }
+
+

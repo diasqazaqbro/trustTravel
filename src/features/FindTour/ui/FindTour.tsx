@@ -629,7 +629,12 @@ const FindTour = () => {
             </div>
           </div>
           {/* Конец второй колонки */}
-            
+            {/* <div className="mobile__circle">
+              <svg width="411" height="61" viewBox="0 0 411 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30.1768" r="30" fill="#01A0C7"/>
+                <circle cx="380.934" cy="30.1768" r="30" fill="#01A0C7"/>
+              </svg>
+            </div> */}
           </div>
           <Link
             href={"/attractions#tours"}
