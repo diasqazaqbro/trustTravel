@@ -4,6 +4,7 @@
       display: flex
       justify-content: space-between
       margin-bottom: 75px
+      padding: 0 10px 0 5px
       .block
         display: block
         align-items: center
@@ -52,6 +53,9 @@
         border: none
         padding: 12px 31px
         cursor: pointer
+
+.logo
+  padding: 5px 0 0 0
 
 // Сам тур 
 
@@ -258,7 +262,7 @@
           line-height: 120%
       .mobile__tour_more
         margin-top: 30px
-        padding-left: 12px
+        padding-left: 41px
         h4
           color: var(--color-white)
           font-size: 12px
@@ -275,9 +279,45 @@
     margin-top: 45px
     border-radius: 5px
   .mobile__tour_img
-    display: flex
-    justify-content: center
-    align-items: center
+    padding: 0 40px 0 40px
+    img
+      width: 350px
+  .mobile__tour_cost
+    margin-top: 30px
+    padding: 0 41px 0 41px
+    h5
+      color: var(--color-white)
+      font-size: 20px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 12px
+    h1
+      color: var(--color-white)
+      font-size: 48px
+      font-style: normal
+      font-weight: 600
+      line-height: normal
+      margin-bottom: 30px
+  .mobile__tour_btn
+    padding: 0 41px 0 41px
+    button
+      border-radius: 10px
+      color: var(--color-white)
+      font-size: 24px
+      font-style: normal
+      font-weight: 600
+      line-height: normal
+      transition: all 0.3s ease
+      &:hover
+        transform: scale(1.05)
+    .tour__buying
+      padding: 10px 35px
+      margin-right: 17.71px
+      background: var(--color-primary)
+    .tour__basket
+      background: #132950
+      padding: 11px 25px
 
   .mobile__main
     background: var(--color-primary)
@@ -389,3 +429,7 @@
     // padding: 0 35px 0 35px
   .mobile__main
     background: var(--color-primary)
+
+.link 
+  svg 
+    padding: 1px 2px 5px 0px

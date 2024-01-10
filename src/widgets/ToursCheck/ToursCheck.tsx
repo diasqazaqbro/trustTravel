@@ -5,7 +5,7 @@ import Link from 'next/link';
 import image from '../../../public/images/tour_img.png'
 import styles from './ToursCheck.module.sass';
 import NavBar from '@/entities/Navbar/Navbar';
-import { ListIcon, ListIconGrid, Logo, Naming } from '@/shared/ui/Icon/Icon';
+import { ListIcon, ListIconGrid, Logo, LogoWhite, Naming } from '@/shared/ui/Icon/Icon';
 import { MenuOutlined } from '@ant-design/icons';
 import Button from '@/shared/ui/Button/Button';
 import BasicRating from '@/shared/ui/Rating/Rating';
@@ -26,8 +26,7 @@ const ToursCheck = () => {
               <div className={styles.inner}>
                 <div className={styles.logo}>
                   <Link href="/" className={styles.link}>
-                    <Logo />
-                    <Naming />
+                    <LogoWhite />
                   </Link>
                 </div>
                 <div className={styles.block}>
@@ -144,8 +143,7 @@ const ToursCheck = () => {
               <div className={styles.inner}>
                 <div className={styles.logo}>
                   <Link href="/" className={styles.link}>
-                    <Logo />
-                    <Naming />
+                    <LogoWhite />
                   </Link>
                 </div>
                 <div className={styles.block}>
@@ -195,7 +193,15 @@ const ToursCheck = () => {
               <h4><span>Дата: </span> 6 января</h4>
             </div>
             <div className={styles.mobile__tour_img}>
-              <Image width={310} height={186}  src={image} alt={'Tour'} className={styles.img}/>
+              <Image height={186} src={image} alt={'Tour'} className={styles.img}/>
+            </div>
+            <div className={styles.mobile__tour_cost} >
+              <h5>Цена: </h5>
+              <h1>12 000 ₸</h1>
+            </div >
+            <div className={styles.mobile__tour_btn}>
+              <Button className={styles.tour__buying} text='Купить' disabled={false} />
+              <Button className={styles.tour__basket} text='Корзина' disabled={false} />
             </div>
           </div>
         </section>
