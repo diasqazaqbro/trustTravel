@@ -152,7 +152,7 @@ const ToursCheck = () => {
                 
                 <div className={styles.menu}>
                   <MenuOutlined
-                    style={{ fontSize: '26px' }}
+                    style={{ fontSize: '28px' }}
                     onClick={() => setNavbar(!navbar)}
                   />
                   {navbar ? (

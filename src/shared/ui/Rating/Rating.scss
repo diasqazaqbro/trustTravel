@@ -12,6 +12,9 @@
 .star__grade {
   font-size: 40px;
 }
+.grade_rating {
+  font-size: 32px;
+}
 
 @media only screen and (max-width: 700px) {
   .star__grade {
@@ -19,5 +22,10 @@
     position: relative;
     top: -26%;
     left: 84%;
+  }
+  .grade_rating {
+    font-size: 28px;
+    position: relative;
+    top: -5px;
   }
 }

@@ -14,7 +14,7 @@ export default function BasicRating() {
         '& > legend': { mt: 2 },
       }}
     >
-      <Rating name="no-value" value={null} style={{ fontSize: '32px' }} />
+      <Rating name="no-value" value={null} className='grade_rating' />
     </Box>
   );
 }

@@ -91,85 +91,218 @@
                     outline: none
                     border: none
 
+.mobile
+    display: none
+
 @media only screen and (max-width: 600px)
-
     .footer
-        margin-top: 0px
-        padding: 30px 0
-        .inner
+        display: none
+
+    // .footer
+    //     margin-top: 0px
+    //     padding: 30px 40px
+    //     .inner
+    //         display: flex
+    //         .block__one
+    //             width: 100%
+    //             .contacts
+    //                 h2
+    //                     color: #000
+    //                     font-size: 24px
+    //                     font-style: normal
+    //                     font-weight: 500
+    //                     line-height: 160%
+    //                     letter-spacing: 0.84px
+
+    //                     h3
+    //                         color: #000
+    //                         font-size: 16px
+    //                         font-style: normal
+    //                         font-weight: 500
+    //                         line-height: normal
+
+    //                     .icons
+    //                         display: flex
+
+    //                         svg
+    //                             margin-right: 40px
+
+    .block__two
+        display: none
+
+    .block__three
+        display: none
+
+    .block__four
+        display: none
+
+    //             h3
+    //                 color: #000
+    //                 font-size: 16px
+    //                 font-style: normal
+    //                 font-weight: 600
+    //                 line-height: 150%
+    //                 letter-spacing: 0.96px
+
+    //             p
+    //                 color: rgba(0, 0, 0, 0.70)
+    //                 font-size: 14px
+    //                 font-style: normal
+    //                 font-weight: 500
+    //                 line-height: 150%
+    //                 letter-spacing: 0.84px
+
+    //             form
+    //                 input
+    //                     width: 170.636px
+    //                     height: 38.502px
+    //                     border-radius: 5px
+    //                     border: 1px solid #132950
+    //                     color: #000
+    //                     font-size: 14px
+    //                     font-style: normal
+    //                     font-weight: 400
+    //                     line-height: 150%
+    //                     letter-spacing: 0.84px
+
+    //                 button
+    //                     padding: 10px 7px
+    //                     color: #FFF
+    //                     font-size: 14px
+    //                     font-style: normal
+    //                     font-weight: 700
+    //                     line-height: 150%
+    //                     letter-spacing: 0.84px
+    //                     border-radius: 5px
+    //                     background: #01A0C7
+    //                     outline: none
+    //                     border: none
+    //                     margin-left: 20px
+
+    .mobile
+        display: block
+        .footer__mobile
+            margin-top: 0
             display: flex
-            .block__one
-                width: 100%
-                .contacts
-                    h2
-                        color: #000
-                        font-size: 24px
-                        font-style: normal
-                        font-weight: 500
-                        line-height: 160%
-                        letter-spacing: 0.84px
-
-                        h3
-                            color: #000
-                            font-size: 16px
-                            font-style: normal
-                            font-weight: 500
-                            line-height: normal
-
-                        .icons
-                            display: flex
-
-                            svg
-                                margin-right: 40px
-
-            .block__two
-                display: none
-
-            .block__three
-                display: none
-
-            .block__four
-                display: none
-
-                h3
+            flex-direction: column
+            padding: 30px 30px
+            .inner
+                h1
                     color: #000
-                    font-size: 16px
-                    font-style: normal
-                    font-weight: 600
-                    line-height: 150%
-                    letter-spacing: 0.96px
-
-                p
-                    color: rgba(0, 0, 0, 0.70)
-                    font-size: 14px
+                    text-align: center
+                    font-size: 20px
                     font-style: normal
                     font-weight: 500
-                    line-height: 150%
-                    letter-spacing: 0.84px
-
-                form
-                    input
-                        width: 170.636px
-                        height: 38.502px
-                        border-radius: 5px
-                        border: 1px solid #132950
+                    line-height: 160%
+                    letter-spacing: 1.2px
+                    margin-bottom: 30px
+                .icon__mobile
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    gap: 38px
+                    margin-bottom: 30px
+                .link1
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    margin-bottom: 25px
+                    a
+                        text-decoration: none
                         color: #000
-                        font-size: 14px
+                        font-size: 16px
+                        display: flex
+                        justify-content: center
+                        align-items: center
                         font-style: normal
-                        font-weight: 400
+                        white-space: nowrap
+                        font-weight: 500
                         line-height: 150%
-                        letter-spacing: 0.84px
-
-                    button
-                        padding: 10px 7px
-                        color: #FFF
-                        font-size: 14px
+                        letter-spacing: 0.96px
+                        &:first-child
+                            // margin-right: 30px
+                .link2
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-gap: 30px
+                    margin-bottom: 25px
+                    a
+                        text-decoration: none
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        color: #000
+                        font-size: 16px
                         font-style: normal
-                        font-weight: 700
+                        white-space: nowrap
+                        font-weight: 500
                         line-height: 150%
-                        letter-spacing: 0.84px
-                        border-radius: 5px
-                        background: #01A0C7
-                        outline: none
-                        border: none
-                        margin-left: 20px
+                        letter-spacing: 0.96px
+                .link3
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-gap: 60px
+                    margin-bottom: 30px
+                    a
+                        text-decoration: none
+                        color: #000
+                        font-size: 16px
+                        font-style: normal
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        white-space: nowrap
+                        font-weight: 500
+                        line-height: 150%
+                        letter-spacing: 0.96px
+                .footer__input
+                    h1
+                        color: #000
+                        font-size: 18px
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 150%
+                        letter-spacing: 1.08px
+                        margin-bottom: 15px
+                    p
+                        color: rgba(0, 0, 0, 0.70)
+                        text-align: center
+                        font-size: 13px
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 150%
+                        letter-spacing: 0.78px
+                        margin-bottom: 0
+                    .input
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        margin-bottom: 20px
+                        input
+                            border-radius: 5px
+                            border: 1px solid #132950
+                            padding-left: 10px
+                            padding: 5px 40px 5px 13px
+                .send
+                    .logo__mobile
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        flex-wrap: nowrap
+                    .btn__send
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        button
+                            padding: 7px 15px
+                            border: none
+                            flex-shrink: 0
+                            outline: none
+                            border-radius: 5px
+                            background: #01A0C7
+                            color: #FFF
+                            font-size: 14px
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 150%
+                            letter-spacing: 0.84px
+                            margin-bottom: 20px

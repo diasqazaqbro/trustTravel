@@ -4,7 +4,7 @@ import './RelatedItems.scss'
 export const RelatedItems = () => {
   return (
     <section className='related__items'>
-      <div className='container'>
+      <div className='container container__related'>
         <div className='related__items-inner'>
           <Card id={''} image={''} />
         </div>

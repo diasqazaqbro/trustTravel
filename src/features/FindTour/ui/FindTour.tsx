@@ -11,6 +11,7 @@ const FindTour = () => {
   const [showTwo, setShowTwo] = useState(true);
   const [showThree, setShowThree] = useState(true);
   const [showFour, setShowFour] = useState(true);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [category, setCategory] = useState("");
   const [location, setLocation] = useState("");
   const [time, setTime] = useState("");
@@ -48,6 +49,15 @@ const FindTour = () => {
   // const toogleModal = () => {
   //   setModalActive(!modalActive)
   // };
+
+  const itemCategoryClickTest = (item: string): void => {
+    if (activeCategory === item) {
+      setActiveCategory(null)
+    }
+    else {
+      setActiveCategory(item)
+    }
+  }
 
   const submitButton = () => {
     dispatch(categoryFC(category));
@@ -258,9 +268,10 @@ const FindTour = () => {
                   Вид туризма
                   <div
                     onClick={() => {
-                      setShowOne(!showOne);
+                      // setShowOne(!showOne);
+                      itemCategoryClickTest('Вид туризма')
                     }}
-                    className='dropdown'
+                    className='dropdown'  
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -351,7 +362,7 @@ const FindTour = () => {
                       </g>
                     </svg>
                   </div>
-                  {!showOne ? (
+                  {activeCategory === 'Вид туризма' && (
                     <div className='show'>
                       <h4
                         onClick={() => {
@@ -389,8 +400,6 @@ const FindTour = () => {
                         Природный
                       </h4>
                     </div>
-                  ) : (
-                    ""
                   )}
                 </div>
               </div>
@@ -402,7 +411,8 @@ const FindTour = () => {
                   Локация
                   <div
                     onClick={() => {
-                      setShowTwo(!showTwo);
+                      // setShowTwo(!showTwo);
+                      itemCategoryClickTest('Локация')
                     }}
                     className='dropdown'
                   >
@@ -446,7 +456,7 @@ const FindTour = () => {
                       </g>
                     </svg>
                   </div>
-                  {!showTwo ? (
+                  {activeCategory === 'Локация' ? (
                     <div className='show'>
                       <h4
                         onClick={() => {
@@ -473,7 +483,8 @@ const FindTour = () => {
                   Время от меня
                   <div
                     onClick={() => {
-                      setShowThree(!showThree);
+                      // setShowThree(!showThree);
+                      itemCategoryClickTest('Время от меня')
                     }}
                     className='dropdown'
                   >
@@ -513,7 +524,7 @@ const FindTour = () => {
                       </g>
                     </svg>
                   </div>
-                  {!showThree ? (
+                  {activeCategory === 'Время от меня' ? (
                     <div className='show'>
                       <h4
                         onClick={() => {
@@ -557,7 +568,8 @@ const FindTour = () => {
                   Уровень сложности
                   <div
                     onClick={() => {
-                      setShowFour(!showFour);
+                      // setShowFour(!showFour);
+                      itemCategoryClickTest('Уровень сложности')
                     }}
                     className='dropdown'
                   >
@@ -597,7 +609,7 @@ const FindTour = () => {
                       </g>
                     </svg>
                   </div>
-                  {!showFour ? (
+                  {activeCategory === 'Уровень сложности' ? (
                     <div className='show'>
                       <h4
                         onClick={() => {
@@ -628,13 +640,6 @@ const FindTour = () => {
               </div>
             </div>
           </div>
-          {/* Конец второй колонки */}
-            {/* <div className="mobile__circle">
-              <svg width="411" height="61" viewBox="0 0 411 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="30" cy="30.1768" r="30" fill="#01A0C7"/>
-                <circle cx="380.934" cy="30.1768" r="30" fill="#01A0C7"/>
-              </svg>
-            </div> */}
           </div>
           <Link
             href={"/attractions#tours"}
