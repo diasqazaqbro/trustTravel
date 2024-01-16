@@ -19,15 +19,14 @@ export function CarouselDemo() {
           <CarouselItem key={index} className={style.carousle__item}> 
             <div className="p-1">
               <Image alt="pepsi" src={image} width={310} height={186} className={style.img} />
-              
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className={style.button__prev}>
-        <CarouselPrevious className={style.prev} />
-      </div>
+      {/* <div className={style.button__prev}>
+      </div> */}
       <div className={style.carousel__button}>
+        <CarouselPrevious className={style.prev} />
         <CarouselNext className={style.next} />
       </div>
     </Carousel>
