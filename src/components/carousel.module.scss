@@ -1,0 +1,97 @@
+.carousel {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+
+  &__content {
+    display: flex;
+
+    .carousel-item {
+      padding: 0.25rem;
+
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+
+        .card-content {
+          display: flex;
+          aspect-ratio: 1;
+          align-items: center;
+          justify-content: center;
+          padding: 1.5rem;
+
+          .text {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__previous,
+  &__next {
+    cursor: pointer;
+  }
+}
+
+.img {
+  border-radius: 10px;
+}
+
+.button__prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .prev {
+    position: absolute;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    outline: none;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    height: 2.5rem;
+    width: 2.5rem;
+    left: 0;
+    border-radius: 9999px;
+    transform: translateY(-25%);
+    opacity: 0.5;
+    background: opacity;
+  }
+}
+
+.carousel__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .next {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    outline: none;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    opacity: 0.5;
+    background: opacity;
+
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 9999px;
+    transform: translateY(-25%);
+  }
+}

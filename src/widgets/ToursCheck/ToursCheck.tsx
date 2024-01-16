@@ -14,6 +14,8 @@ import Image from 'next/image';
 import Footer from '../Layout/Footer/Footer';
 import { RelatedItems } from '../RelatedItems/ui/RelatedItems';
 import { Filter } from '@/shared/ui/Filter/Filter';
+import { CarouselM } from '@/features/Carousel/ui/Carousel';
+import { CarouselDemo } from '@/components/carousel';
 
 const ToursCheck = () => {
   const [navbar, setNavbar] = useState(false);
@@ -193,7 +195,7 @@ const ToursCheck = () => {
               <h4><span>Дата: </span> 6 января</h4>
             </div>
             <div className={styles.mobile__tour_img}>
-              <Image height={186} src={image} alt={'Tour'} className={styles.img}/>
+              <CarouselDemo />
             </div>
             <div className={styles.mobile__tour_cost} >
               <h5>Цена: </h5>
