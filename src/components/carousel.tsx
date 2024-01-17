@@ -14,6 +14,9 @@ import Image from "next/image"
 export function CarouselDemo() {
   return (
     <Carousel className={style.carousel}>
+      <div className={style.button__prev}>
+        <CarouselPrevious className={style.prev} />
+      </div>
       <CarouselContent className={style.carousle__content}>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index} className={style.carousle__item}> 
@@ -23,10 +26,7 @@ export function CarouselDemo() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      {/* <div className={style.button__prev}>
-      </div> */}
       <div className={style.carousel__button}>
-        <CarouselPrevious className={style.prev} />
         <CarouselNext className={style.next} />
       </div>
     </Carousel>
