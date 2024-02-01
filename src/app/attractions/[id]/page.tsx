@@ -9,14 +9,18 @@ import { Grid, Spin } from "antd";
 import { BarsOutlined, FilterOutlined, MenuOutlined } from "@ant-design/icons";
 import { GridIcon, Location } from "@/shared/ui/Icon/Icon";
 import Link from "next/link";
-interface IPlace {
+import ToursCheck from "@/widgets/ToursCheck/ToursCheck";
+
+export interface IPlace {
   id: number;
   name: string;
   description: string;
   image: string;
+  price: string;
+  time: number;
 }
 
-interface ITour {
+export interface ITour {
   amount_of_people: number;
   date: string;
   description: string;
@@ -32,7 +36,7 @@ export default function Place({ params }: { params: { id: number } }) {
   const [info, setInfo] = useState<IPlace[]>([]);
   const [tours, setTours] = useState<ITour[]>([]);
   const [spinning, setSpinning] = useState<boolean>(false);
-  const [view, setView] = useState("menu");
+
   useEffect(() => {
     const showLoader = () => {
       setSpinning(true);
@@ -60,80 +64,10 @@ export default function Place({ params }: { params: { id: number } }) {
       });
   }, [params.id, tours.length]);
 
-  const viewMenu = () => {};
-
-  const viewGrid = () => {};
-
   return (
     <main className={styles.attractions}>
       <Spin spinning={spinning} fullscreen />
-      <Layout>
-        {/* <div className={styles.info}></div> */}
-
-        <div className="container">
-          {/* <SpecialPlace /> */}
-          <h5>Туры до {info.length > 0 ? info[0].name : ""}</h5>
-          <div className={styles.filter}>
-            <div className={styles.one}>
-              <h3>
-                Высокий рейтинг <FilterOutlined style={{ fontSize: "20px" }} />
-              </h3>
-            </div>
-            <div className={styles.two}>
-              <span onClick={viewMenu}>
-                <MenuOutlined style={{ fontSize: "31px" }} />
-              </span>
-              <span onClick={viewGrid}>
-                <GridIcon />
-              </span>
-            </div>
-          </div>
-          <div className={styles.menu}>
-            {tours.length > 0
-              ? tours.map((item, index) => {
-                  return (
-                    <Link href={`/`} className={styles.item} key={index}>
-                      <div className={styles.row}>
-                        <img src={item.image} alt={item.name} />
-                        <div className={styles.info}>
-                          <h2>{item.name}</h2>
-                          <h4>
-                             Алматы
-                          </h4>
-                          <p>{item.description}</p>
-                          <div className={styles.about}>
-                            <h5>
-                               от центра минут.
-                            </h5>
-                            <h5>
-                               цена {item.price} тг.
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })
-              : ""}
-          </div>
-          <div className={styles.grid}>
-            {tours.length > 0
-              ? tours.map((item, index) => {
-                  return (
-                    <div className={styles.item} key={index}>
-                      {item.name}
-                    </div>
-                  );
-                })
-              : ""}
-          </div>
-          {tours.length > 0
-            ? tours.map((item, index) => {
-                return <div key={index}>{item.name}</div>;
-              })
-            : ""}
-        </div>
-      </Layout>
+     {info ?  <ToursCheck info={info} tours={tours} /> : ''}
     </main>
   );
 }
